@@ -1,8 +1,8 @@
-# Welcome, a fellow developer, I'm glad you are here!
+# Demo
 
-Please, put the solution on GitHub and send the link back via email.
-Enjoy!
+Click here (http://forecast.poormohammmadi.ir/) to see demo.
 
+`Note: make sure to open it with 'http' not 'https'`
 # The day to day task: weather forecast
 
 Using the free open weather map two API endpoints (the key is on the weather service)
