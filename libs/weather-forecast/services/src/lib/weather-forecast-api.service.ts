@@ -20,6 +20,7 @@ export class WeatherForecastApiService {
 					q: cityName,
 					limit: 1,
 					appid: this._apiKey,
+					units: 'metric'
 				}
 			});
 	}
@@ -32,6 +33,7 @@ export class WeatherForecastApiService {
 				lon,
 				exclude: 'current,minutely,daily,alerts',
 				appid: this._apiKey,
+				units: 'metric'
 			}
 		});
 	}
@@ -44,6 +46,7 @@ export class WeatherForecastApiService {
 				lon,
 				exclude: 'current,minutely,hourly,alerts',
 				appid: this._apiKey,
+				units: 'metric'
 			}
 		});
 	}
