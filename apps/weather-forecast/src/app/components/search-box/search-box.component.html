@@ -1,0 +1,24 @@
+<form [formGroup]="formGroup">
+
+	<div class="input-container" [ngClass]="{'success' : !!(cityName$ | async), 'error': !!(cityError$ | async)}">
+		<input class="city-input" formControlName="city" placeholder="Enter city Name">
+
+		<div *ngIf="isSearching$ | async" class="spinner-container">
+			<bp-spinner></bp-spinner>
+		</div>
+	</div>
+
+	<div class="time-frame">
+		<div>
+			<input type="radio" id="hourly" value="hourly" formControlName="timeFrame">
+			<label for="hourly">Hourly</label>
+		</div>
+		<div>
+			<input type="radio" id="daily" value="daily" formControlName="timeFrame">
+			<label for="daily">Daily</label>
+		</div>
+	</div>
+
+
+
+</form>

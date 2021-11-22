@@ -1,0 +1,32 @@
+<ng-container *ngIf="hourlyData$ | async as hourlyData">
+	<table *ngIf="hourlyData.length">
+		<tr>
+			<th class="city">City Name</th>
+			<th *ngFor="let item of hourlyData">
+				<div>
+					<ng-container *ngFor="let i of item; let index = index">
+						<span *ngIf="index === 0">
+							{{ i.dt * 1000 | date: 'h a'}}
+						</span>
+						<span *ngIf="index !== 0">
+							{{' - '}}
+							{{i.dt * 1000 + 3600000 | date: 'h a'}}
+						</span>
+					</ng-container>
+				</div>
+			</th>
+		</tr>
+
+		<tr>
+			<td class="city">{{cityName$ | async | uppercase}}</td>
+			<td *ngFor="let item of hourlyData">
+				<ng-container *ngFor="let i of item; let index = index">
+					{{index === 0
+					? (i.temp | toDegrees) + ' - '
+					: (i.temp | toDegrees)
+					}}
+				</ng-container>
+			</td>
+		</tr>
+	</table>
+</ng-container>

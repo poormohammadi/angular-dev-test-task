@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+	margin: 0;
+
+	background: rgb(255,255,255);
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(149,177,232,1) 52%, rgba(158,193,255,1) 100%);
+}
+
+* {
+	font-family: system-ui;
+}
+
+table {
+	width: 100%;
+    min-height: 80px;
+
+	td {
+		text-align: center;
+		min-width: 200px;
+		border: 1px solid black;
+		border-radius: 30px;
+	}
+
+	th {
+		border: 1px solid black;
+		border-radius: 30px;
+	}
+
+	.city {
+		background-color: #161616;
+		color: white;
+	}
+}
+
+

@@ -1,0 +1,12 @@
+<div *ngIf="(timeFrame$ | async) as timeframe" class="table-container">
+	<div *ngIf="isLoading$ | async" class="spinner-container">
+		<bp-spinner></bp-spinner>
+	</div>
+
+	<div *ngIf="cityError$ | async" class="error">
+		{{cityError$ | async }}
+	</div>
+
+	<bp-hourly-table *ngIf="timeframe === 'hourly'"></bp-hourly-table>
+	<bp-daily-table *ngIf="timeframe === 'daily'"></bp-daily-table>
+</div>

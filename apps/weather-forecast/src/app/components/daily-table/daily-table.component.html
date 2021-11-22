@@ -1,0 +1,16 @@
+<ng-container *ngIf="dailyData$ | async as dailyData">
+	<table *ngIf="dailyData.length">
+		<tr>
+			<th class="city">City Name</th>
+			<th *ngFor="let item of dailyData">
+				{{item.dt * 1000 | date : 'EEEE, MMM d' }}
+			</th>
+		</tr>
+		<tr>
+			<td class="city">{{cityName$ | async | uppercase}}</td>
+			<td *ngFor="let item of dailyData">
+				{{item.temp.min | toDegrees}} - {{item.temp.max | toDegrees}}
+			</td>
+		</tr>
+	</table>
+</ng-container>

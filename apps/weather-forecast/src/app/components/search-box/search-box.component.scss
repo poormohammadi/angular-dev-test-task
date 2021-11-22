@@ -1,0 +1,46 @@
+:host {
+	display: block;
+}
+
+form {
+	display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.input-container {
+	display: flex;
+	flex: 1;
+    border-radius: 10px;
+    background: white;
+	box-shadow: 0 0 3px #383838;
+
+	&.error {
+		box-shadow: 0 0 3px red;
+		background: #ffe6e6;
+	}
+
+	&.success {
+		box-shadow: 0 0 3px green;
+		background: #fafff2;
+	}
+
+	input {
+		outline: none;
+		font-size: 1rem;
+		flex: 1;
+		height: 100%;
+		padding: 0;
+		margin: 0 20px;
+		border: none;
+		background: transparent;
+	}
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    right: 15px;
+}
